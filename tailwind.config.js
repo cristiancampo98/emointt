@@ -2,17 +2,17 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
-    // `${srcDir}/components/**/*.{vue,js,ts}`,
-    // `${srcDir}/layouts/**/*.vue`,
-    // `${srcDir}/pages/**/*.vue`,
-    // `${srcDir}/composables/**/*.{js,ts}`,
-    // `${srcDir}/plugins/**/*.{js,ts}`,
-    // `${srcDir}/utils/**/*.{js,ts}`,
-    // `${srcDir}/App.{js,ts,vue}`,
-    // `${srcDir}/app.{js,ts,vue}`,
-    // `${srcDir}/Error.{js,ts,vue}`,
-    // `${srcDir}/error.{js,ts,vue}`,
-    // `${srcDir}/app.config.{js,ts}`
+    `./components/**/*.{vue,js,ts}`,
+    `./layouts/**/*.vue`,
+    `./pages/**/*.vue`,
+    `./composables/**/*.{js,ts}`,
+    `./plugins/**/*.{js,ts}`,
+    `./utils/**/*.{js,ts}`,
+    `./App.{js,ts,vue}`,
+    `./app.{js,ts,vue}`,
+    `./Error.{js,ts,vue}`,
+    `./error.{js,ts,vue}`,
+    `./app.config.{js,ts}`
   ],
   theme: {
     extend: {
@@ -24,7 +24,40 @@ module.exports = {
       }
     },
   },
-  plugins: [],
-  prefix: 'tw-',
+  plugins: [require("daisyui")],
+  jit: true,
+  daisyui: {
+    themes: [
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+    ],
+  }
 }
 
